@@ -12,7 +12,7 @@ const AboutComponent = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-text-gray">
               About Our Transportation Services
             </h2>
-            <p className="text-text-gray text-lg mb-6">
+            <p className="text-gray-600 text-lg mb-6">
               We are dedicated to providing{' '}
               <span className="text-yellow-300">safe</span>,
               <span className="text-green-300">efficient</span>, and{' '}
@@ -27,7 +27,7 @@ const AboutComponent = () => {
                 <div className="mr-4">
                   <FaBus className="text-4xl text-blue-200" />
                 </div>
-                <p className="text-text-gray text-lg">
+                <p className="text-gray-600 text-lg">
                   Reliable and Efficient <br /> Transportation Services
                 </p>
               </div>
@@ -35,7 +35,7 @@ const AboutComponent = () => {
                 <div className="mr-4">
                   <FaShippingFast className="text-4xl text-green-200" />
                 </div>
-                <p className="text-text-gray text-lg">
+                <p className="text-gray-600 text-lg">
                   Timely and Secure <br /> Cargo Delivery
                 </p>
               </div>
@@ -43,7 +43,7 @@ const AboutComponent = () => {
                 <div className="mr-4">
                   <FaPlane className="text-4xl text-red-200" />
                 </div>
-                <p className="text-text-gray text-lg">
+                <p className="text-gray-600 text-lg">
                   Fast and Convenient <br /> Air Transport
                 </p>
               </div>
@@ -51,7 +51,7 @@ const AboutComponent = () => {
                 <div className="mr-4">
                   <FaTruck className="text-4xl text-yellow-200" />
                 </div>
-                <p className="text-text-gray text-lg">
+                <p className="text-gray-600 text-lg">
                   Nationwide <br /> Ground Delivery
                 </p>
               </div>
