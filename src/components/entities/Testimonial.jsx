@@ -1,6 +1,10 @@
 import React from 'react';
 import { FaQuoteLeft } from 'react-icons/fa';
 
+// import testimonial1Image from '../images/testimonial1.jpg';
+// import testimonial2Image from '../images/testimonial2.jpg';
+// import testimonial3Image from '../images/testimonial3.jpg';
+
 const Testimonials = () => {
   const testimonials = [
     {
@@ -8,18 +12,21 @@ const Testimonials = () => {
         "TransportCompany has been an excellent partner for our logistics needs. Their timely and reliable services have helped our business run smoothly.",
       author: "Sarah Johnson",
       position: "Supply Chain Manager",
+    //   image: testimonial1Image,
     },
     {
       quote:
         "I've been using TransportCompany's services for years, and they never disappoint. Their dedicated team ensures that our goods are delivered safely and on time.",
       author: "Michael Smith",
       position: "Business Owner",
+    //   image: testimonial2Image,
     },
     {
       quote:
         "The professionalism and efficiency of TransportCompany are unparalleled. They handle our shipping and transportation needs with precision and care.",
       author: "Emily White",
       position: "Operations Director",
+    //   image: testimonial3Image,
     },
   ];
 
@@ -41,8 +48,19 @@ const Testimonials = () => {
                   {testimonial.quote}
                 </p>
               </div>
-              <p className="font-semibold text-gray-800">{testimonial.author}</p>
-              <p className="text-gray-600">{testimonial.position}</p>
+              <div className="flex items-center mb-4">
+                <img
+                  src=""
+                  alt={`Testimonial from ${testimonial.author}`}
+                  className="w-10 h-10 rounded-full mr-3"
+                />
+                <div>
+                  <p className="font-semibold text-gray-800">
+                    {testimonial.author}
+                  </p>
+                  <p className="text-gray-600">{testimonial.position}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
