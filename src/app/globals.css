@@ -1,7 +1,12 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
-
+@tailwind utilities; /* styles/globals.css */
+/* @import 'swiper/swiper-bundle.min.css'; */
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  color: rgb(36,65,107);
+  font-family: "Cabin", sans-serif;
+  font-weight: 700;
+}
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -15,13 +20,101 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+.nav-link {
+  @apply h-full relative transition duration-500 ease-linear after:absolute after:bottom-[-100%] after:bg-text-orange after:transition-transform after:scale-x-0 after:h-1 md:after:w-full after:w-[90px] after:left-0 hover:after:scale-x-[1] hover:after:bg-text-orange;
+}
+.active {
+  @apply h-full text-text-orange relative transition duration-500 ease-linear after:absolute after:bottom-[-100%] after:bg-text-orange after:transition-transform after:h-1 md:after:w-full after:w-[90px] after:left-0 after:scale-x-[1];
+}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.toggle {
+  @apply bg-transparent flex cursor-pointer min-w-[40px] h-[40px] flex-col items-center justify-center gap-[5px]  rounded-[10px];
+}
+
+.toggle div {
+  background-color: hsl(220, 13%, 13%);
+  height: 2px;
+  width: 25px;
+  transition: all 0.4s ease;
+  margin-top: 5px 0;
+}
+
+.toggle.open .first {
+  transform: rotate(-45deg) translate(1px, 11px);
+  margin-right: 15px;
+}
+
+.toggle.open .second {
+  opacity: 0;
+}
+
+.toggle.open .third {
+  transform: rotate(45deg) translate(1px, -11px);
+  margin-right: 15px;
+}
+.back-to-top{
+  animation: backtotop 3s linear infinite;
+}
+@keyframes backtotop {
+  0%{
+    transform: translateY(10px);
+  }
+  50%{
+    transform: translateY(0px);
+  }
+  100%{
+    transform: translateY(10px);
+  }
+}
+.service-item {
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.07);
+}
+
+.service-item img {
+  transition: 0.5s;
+}
+
+.service-item:hover img {
+  transform: scale(1.1);
+}
+
+.service-item a.btn-slide {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  font-size: 0;
+}
+
+.service-item a.btn-slide i,
+.service-item a.btn-slide span {
+  position: relative;
+  height: 40px;
+  padding: 0 15px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  color: #ffffff;
+  background: rgb(250,70,18);
+  border-radius: 0 35px 35px 0;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.service-item a.btn-slide span {
+  padding-left: 0;
+  left: -100%;
+  z-index: 1;
+}
+
+.service-item:hover a.btn-slide i {
+  border-radius: 0;
+}
+
+.service-item:hover a.btn-slide span {
+  left: 0;
+}
+
+.service-item a.btn-slide:hover i,
+.service-item a.btn-slide:hover span {
+  background: rgb(36,65,107);
 }
