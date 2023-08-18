@@ -1,25 +1,37 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaAngleDoubleUp } from "react-icons/fa";
 
 const BackToTop = () => {
   const [backUp, setBackUp] = useState(false);
-  window.addEventListener("scroll", () => {
-    if (
-      document.body.scrollTop >= 100 ||
-      document.documentElement.scrollTop >= 100
-    ) {
-      setBackUp(true);
-    } else {
-      setBackUp(false);
-    }
-  });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (
+        document.body.scrollTop >= 100 ||
+        document.documentElement.scrollTop >= 100
+      ) {
+        setBackUp(true);
+      } else {
+        setBackUp(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const handleScrollUp = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   };
+
   return (
     <button
       onClick={handleScrollUp}
@@ -38,3 +50,4 @@ const BackToTop = () => {
 };
 
 export default BackToTop;
+
