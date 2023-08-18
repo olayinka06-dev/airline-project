@@ -47,7 +47,7 @@ const AboutComponent = () => {
                   Fast and Convenient <br /> Air Transport
                 </p>
               </div>
-              <div className="flex items-center">
+              <div className="flex card items-center">
                 <div className="mr-4">
                   <FaTruck className="text-4xl text-yellow-200" />
                 </div>
