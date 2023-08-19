@@ -3,35 +3,35 @@ import { FaEnvelope, FaFacebook, FaInstagram, FaLinkedinIn, FaPhoneAlt, FaTwitte
 
 const Header = () => {
   return (
-    <div class="container-fluid bg-text-blue">
-      <div class="flex py-1 lg:px-5">
-        <div class="w-1/2 text-center lg:text-left mb-2 lg:mb-0">
-          <div class="inline-flex items-center text-white">
+    <div className="container-fluid bg-text-blue">
+      <div className="flex flex-col md:flex-row py-1 lg:px-5">
+        <div className="w-full md:w-1/2 text-center lg:text-left mb-2 lg:mb-0">
+          <div className="inline-flex items-center text-white">
             <small className="flex items-center">
-              <i class="fa fa-phone-alt mr-2"><FaPhoneAlt/></i>+012 345 6789
+              <i className="fa fa-phone-alt mr-2"><FaPhoneAlt/></i>+012 345 6789
             </small>
-            <small class="px-3">|</small>
+            <small className="px-3">|</small>
             <small className="flex items-center">
-              <i class="fa fa-envelope mr-2"><FaEnvelope/></i>info@example.com
+              <i className="fa fa-envelope mr-2"><FaEnvelope/></i>info@example.com
             </small>
           </div>
         </div>
-        <div class="w-1/2 text-center lg:text-right">
-          <div class="inline-flex items-center">
-            <a class="text-white hover:text-text-orange transition duration-300 ease-linear px-2" href="">
+        <div className="w-full md:w-1/2 text-center lg:text-right">
+          <div className="inline-flex items-center">
+            <a className="text-white hover:text-text-orange transition duration-300 ease-linear px-2" href="">
               <FaFacebook/>
             </a>
-            <a class="text-white hover:text-text-orange transition duration-300 ease-linear px-2" href="">
-              <i class="fab fa-twitter"><FaTwitter/></i>
+            <a className="text-white hover:text-text-orange transition duration-300 ease-linear px-2" href="">
+              <i className="fab fa-twitter"><FaTwitter/></i>
             </a>
-            <a class="text-white hover:text-text-orange transition duration-300 ease-linear px-2" href="">
-              <i class="fab fa-linkedin-in"><FaLinkedinIn/></i>
+            <a className="text-white hover:text-text-orange transition duration-300 ease-linear px-2" href="">
+              <i className="fab fa-linkedin-in"><FaLinkedinIn/></i>
             </a>
-            <a class="text-white hover:text-text-orange transition duration-300 ease-linear px-2" href="">
-              <i class="fab fa-instagram"><FaInstagram/></i>
+            <a className="text-white hover:text-text-orange transition duration-300 ease-linear px-2" href="">
+              <i className="fab fa-instagram"><FaInstagram/></i>
             </a>
-            <a class="text-white hover:text-text-orange transition duration-300 ease-linear pl-2" href="">
-              <i class="fab fa-youtube"><FaYoutube/></i>
+            <a className="text-white hover:text-text-orange transition duration-300 ease-linear pl-2" href="">
+              <i className="fab fa-youtube"><FaYoutube/></i>
             </a>
           </div>
         </div>

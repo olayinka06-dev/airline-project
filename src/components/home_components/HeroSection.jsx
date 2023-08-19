@@ -158,6 +158,7 @@
 //           spaceBetween={30}
 //           slidesPerView={1}
 //           navigation
+//           grabCursor={true}
 //           autoplay={{ delay: 5000, disableOnInteraction: false }}
 //           pagination={{ clickable: true }}
 //         >

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import CountUp from 'react-countup';
+import CountUp from "react-countup";
 // import emailjs from 'emailjs-com';
 import {
   FaRegCalendarAlt,
@@ -40,7 +40,8 @@ const Booking = () => {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="mb-8 md:mb-0">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-text-gray">
+            <h3 className="text-text-orange mb-5">Booking</h3>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-text-gray">
               Request a Quote or Booking
             </h2>
             <p className="text-gray-700 text-lg leading-relaxed">
@@ -88,7 +89,7 @@ const Booking = () => {
           </div>
           <div className="">
             {isSubmitted ? (
-              <p className="text-green-600 text-center">
+              <p className="text-text-orange text-center">
                 Thank you for your submission! We'll get in touch with you soon.
               </p>
             ) : (
@@ -100,15 +101,15 @@ const Booking = () => {
                   <label className="block text-gray-700 text-sm font-semibold mb-2">
                     Full Name
                   </label>
-                  <div className="relative">
-                    <span className="absolute left-3 top-2 text-gray-500">
+                  <div className="relative flex flex-row items-center">
+                    <span className="absolute left-3 text-gray-500">
                       <FaUser />
                     </span>
                     <input
                       type="text"
                       name="name"
                       placeholder="John Doe"
-                      className="w-full border rounded p-2 pl-10 focus:outline-none focus:ring focus:border-blue-300"
+                      className="w-full border rounded p-2 pl-10 focus:outline-none focus:ring-opacity-60 focus:ring-text-orange focus:ring focus:border-[rgb(250,70,18)]"
                       required
                     />
                   </div>
@@ -117,15 +118,15 @@ const Booking = () => {
                   <label className="block text-gray-700 text-sm font-semibold mb-2">
                     Email
                   </label>
-                  <div className="relative">
-                    <span className="absolute left-3 top-2 text-gray-500">
+                  <div className="relative flex flex-row items-center">
+                    <span className="absolute left-3 text-gray-500">
                       <FaEnvelope />
                     </span>
                     <input
                       type="email"
                       name="email"
                       placeholder="john@example.com"
-                      className="w-full border rounded p-2 pl-10 focus:outline-none focus:ring focus:border-blue-300"
+                      className="w-full border rounded p-2 pl-10 focus:ring-opacity-60 focus:ring-text-orange focus:outline-none focus:ring focus:border-[rgb(250,70,18)]"
                       required
                     />
                   </div>
@@ -134,15 +135,15 @@ const Booking = () => {
                   <label className="block text-gray-700 text-sm font-semibold mb-2">
                     Phone Number
                   </label>
-                  <div className="relative">
-                    <span className="absolute left-3 top-2 text-gray-500">
+                  <div className="relative flex flex-row items-center">
+                    <span className="absolute left-3 text-gray-500">
                       <FaPhone />
                     </span>
                     <input
                       type="tel"
                       name="phone"
                       placeholder="123-456-7890"
-                      className="w-full border rounded p-2 pl-10 focus:outline-none focus:ring focus:border-blue-300"
+                      className="w-full border rounded p-2 pl-10 focus:ring-opacity-60 focus:ring-text-orange focus:outline-none focus:ring focus:border-[rgb(250,70,18)]"
                       required
                     />
                   </div>
@@ -153,7 +154,7 @@ const Booking = () => {
                   </label>
                   <select
                     name="serviceType"
-                    className="w-full border rounded p-2 focus:outline-none focus:ring focus:border-blue-300"
+                    className="w-full border rounded p-2 focus:ring-opacity-60 focus:ring-text-orange focus:outline-none focus:ring focus:border-[rgb(250,70,18)]"
                     required
                   >
                     <option value="">Select Service Type</option>
@@ -166,15 +167,15 @@ const Booking = () => {
                   <label className="block text-gray-700 text-sm font-semibold mb-2">
                     Pickup Location
                   </label>
-                  <div className="relative">
-                    <span className="absolute left-3 top-2 text-gray-500">
+                  <div className="relative flex flex-row items-center">
+                    <span className="absolute left-3 text-gray-500">
                       <FaMapMarkerAlt />
                     </span>
                     <input
                       type="text"
                       name="pickupLocation"
                       placeholder="Enter pickup location"
-                      className="w-full border rounded p-2 pl-10 focus:outline-none focus:ring focus:border-blue-300"
+                      className="w-full border rounded p-2 pl-10 focus:ring-opacity-60 focus:ring-text-orange focus:outline-none focus:ring focus:border-[rgb(250,70,18)]"
                       required
                     />
                   </div>
@@ -183,15 +184,15 @@ const Booking = () => {
                   <label className="block text-gray-700 text-sm font-semibold mb-2">
                     Drop-off Location
                   </label>
-                  <div className="relative">
-                    <span className="absolute left-3 top-2 text-gray-500">
+                  <div className="relative flex flex-row items-center">
+                    <span className="absolute left-3 text-gray-500">
                       <FaMapMarkerAlt />
                     </span>
                     <input
                       type="text"
                       name="dropoffLocation"
                       placeholder="Enter drop-off location"
-                      className="w-full border rounded p-2 pl-10 focus:outline-none focus:ring focus:border-blue-300"
+                      className="w-full border rounded p-2 pl-10 focus:ring-opacity-60 focus:ring-text-orange focus:outline-none focus:ring focus:border-[rgb(250,70,18)]"
                       required
                     />
                   </div>
@@ -200,14 +201,14 @@ const Booking = () => {
                   <label className="block text-gray-700 text-sm font-semibold mb-2">
                     Date of Service
                   </label>
-                  <div className="relative">
-                    <span className="absolute left-3 top-2 text-gray-500">
+                  <div className="relative flex flex-row items-center">
+                    <span className="absolute left-3 text-gray-500">
                       <FaRegCalendarAlt />
                     </span>
                     <input
                       type="date"
                       name="date"
-                      className="w-full border rounded p-2 pl-10 focus:outline-none focus:ring focus:border-blue-300"
+                      className="w-full border rounded p-2 pl-10 focus:ring-opacity-60 focus:ring-text-orange focus:outline-none focus:ring focus:border-[rgb(250,70,18)]"
                       required
                     />
                   </div>

@@ -1,16 +1,24 @@
 "use client";
-import React from 'react';
+import Aos from 'aos';
+import React, { useEffect } from 'react';
 import { FaCheckCircle, FaShieldAlt, FaClock, FaHeart } from 'react-icons/fa';
+import 'aos/dist/aos.css'
 
 const WhyChooseUs = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 500,
+      easing: "ease-in",
+    })
+  }, []);
   return (
-    <section className="py-20 bg-gray-100">
+    <section className="py-24 bg-gray-100">
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-text-gray text-center">
           Why Choose Us
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="flex flex-col items-center p-6 cursor-auto rounded-lg shadow-lg bg-white hover:scale-105 transform transition duration-300 ease-in-out">
+          <div data-aos="slide-up" data-aos-delay="300" className="flex flex-col items-center p-6 cursor-auto rounded-lg shadow-lg bg-white hover:scale-105 transform transition duration-300 ease-in-out">
             <div className="bg-blue-500 rounded-full p-4 text-white text-3xl">
               <FaCheckCircle />
             </div>
@@ -22,7 +30,7 @@ const WhyChooseUs = () => {
               timely delivery.
             </p>
           </div>
-          <div className="flex flex-col items-center p-6 cursor-auto rounded-lg shadow-lg bg-white hover:scale-105 transform transition duration-300 ease-in-out">
+          <div data-aos="slide-up" data-aos-delay="500" className="flex flex-col items-center p-6 cursor-auto rounded-lg shadow-lg bg-white hover:scale-105 transform transition duration-300 ease-in-out">
             <div className="bg-green-500 rounded-full p-4 text-white text-3xl">
               <FaShieldAlt />
             </div>
@@ -34,7 +42,7 @@ const WhyChooseUs = () => {
               security.
             </p>
           </div>
-          <div className="flex flex-col items-center p-6 cursor-auto rounded-lg shadow-lg bg-white hover:scale-105 transform transition duration-300 ease-in-out">
+          <div data-aos="slide-up" data-aos-delay="700" className="flex flex-col items-center p-6 cursor-auto rounded-lg shadow-lg bg-white hover:scale-105 transform transition duration-300 ease-in-out">
             <div className="bg-yellow-500 rounded-full p-4 text-white text-3xl">
               <FaClock />
             </div>

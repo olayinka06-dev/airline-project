@@ -9,7 +9,7 @@ const NavBar = () => {
     setMenu(!menu);
   };
   return (
-    <header className="border-t-[3px] sticky top-0 z-[100] border-solid border-text-orange shadow-lg">
+    <header className="border-t-[3px] bg-white sticky top-0 z-[100] border-solid border-text-orange shadow-lg">
       
       <nav className="container py-5 md:py-6 items-center w-full bg-white  flex justify-between">
         <div className="">

@@ -14,18 +14,18 @@ const AboutComponent = () => {
             </h2>
             <p className="text-gray-600 text-lg mb-6">
               We are dedicated to providing{' '}
-              <span className="text-yellow-300">safe</span>,
-              <span className="text-green-300">efficient</span>, and{' '}
-              <span className="text-blue-300">reliable</span> transportation
+              <span className="text-yellow-500">safe</span>,
+              <span className="text-green-500">efficient</span>, and{' '}
+              <span className="text-blue-500">reliable</span> transportation
               solutions for individuals and businesses. Our team of experienced
               professionals ensures your journey is{' '}
-              <span className="text-pink-300">comfortable</span> and{' '}
-              <span className="text-purple-300">stress-free</span>.
+              <span className="text-pink-500">comfortable</span> and{' '}
+              <span className="text-purple-500">stress-free</span>.
             </p>
             <div className="grid grid-cols-2 gap-4">
               <div className="flex items-center">
                 <div className="mr-4">
-                  <FaBus className="text-4xl text-blue-200" />
+                  <FaBus className="text-4xl text-blue-500" />
                 </div>
                 <p className="text-gray-600 text-lg">
                   Reliable and Efficient <br /> Transportation Services
@@ -33,7 +33,7 @@ const AboutComponent = () => {
               </div>
               <div className="flex items-center">
                 <div className="mr-4">
-                  <FaShippingFast className="text-4xl text-green-200" />
+                  <FaShippingFast className="text-4xl text-green-500" />
                 </div>
                 <p className="text-gray-600 text-lg">
                   Timely and Secure <br /> Cargo Delivery
@@ -41,7 +41,7 @@ const AboutComponent = () => {
               </div>
               <div className="flex items-center">
                 <div className="mr-4">
-                  <FaPlane className="text-4xl text-red-200" />
+                  <FaPlane className="text-4xl text-red-500" />
                 </div>
                 <p className="text-gray-600 text-lg">
                   Fast and Convenient <br /> Air Transport
@@ -49,7 +49,7 @@ const AboutComponent = () => {
               </div>
               <div className="flex card items-center">
                 <div className="mr-4">
-                  <FaTruck className="text-4xl text-yellow-200" />
+                  <FaTruck className="text-4xl text-yellow-500" />
                 </div>
                 <p className="text-gray-600 text-lg">
                   Nationwide <br /> Ground Delivery

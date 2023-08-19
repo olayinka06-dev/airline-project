@@ -44,11 +44,11 @@ const Contact = () => {
           <h2>Contact</h2>
         </div>
 
-        <div class="row">
+        <div className="row">
 
-          <div class="first" data-aos="fade-right">
-            <div class="info">
-              <div class="address">
+          <div className="first" data-aos="fade-right">
+            <div className="info">
+              <div className="address">
                 <i className='icon'><MdLocationPin/></i>
                 <h4>Location:</h4>
                 <p>No 11 Allahulateef Street, Isalekoko, Ilorin Kwara State</p>
@@ -70,7 +70,7 @@ const Contact = () => {
 
           </div>
 
-          <div class="second" data-aos="fade-left">
+          <div className="second" data-aos="fade-left">
 
             <form className="php-email-form" ref={form} onSubmit={sendEmail}>
               <div className="row-two">

@@ -66,6 +66,102 @@
     transform: translateY(10px);
   }
 }
+
+/* HeroSection.css */
+/* .hero-section {
+  position: relative;
+}
+
+.swiper-container {
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.swiper-slide {
+  flex: 0 0 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Apply fade effect */
+/* .swiper-slide-active {
+  opacity: 1;
+}  */
+
+.swiper-slide-next,
+.swiper-slide-prev {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgb(250,70,18);
+  color: white !important;
+  font-size: 14px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  padding: 15px 20px;
+  border-radius: 10px;
+  animation: buttonnext 3s linear infinite;
+  opacity: 1;
+}
+
+.swiper-button-next {
+  right: 20px;
+
+}
+@keyframes buttonnext {
+  0%{
+    transform: translateX(10px);
+    opacity: 0.8;
+  }
+  50%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  100%{
+    transform: translateX(10px);
+    opacity: 0.8;
+  }
+}
+
+.swiper-button-prev {
+  left: 20px;
+  /* animation: buttonprev 3s linear infinite; */
+}
+
+/* @keyframes buttonprev {
+  0%{
+    transform: translateX(10px);
+  }
+  50%{
+    transform: translateX(0px);
+  }
+  100%{
+    transform: translateX(10px);
+  }
+} */
+
+/* Custom styles for Swiper navigation icons */
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 10px !important; 
+}
+
+
+
 .service-item {
   box-shadow: 0 0 45px rgba(0, 0, 0, 0.07);
 }
