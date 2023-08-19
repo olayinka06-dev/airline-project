@@ -29,7 +29,7 @@ const Testimonials = () => {
   return (
     <section className="py-20 bg-gray-100">
       <div className="container mx-auto">
-        <h3 className='text-text-orange'>Testimonial</h3>
+        <h3 className='text-text-orange mb-5'>Testimonial</h3>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-gray-800 text-center">
           What Our Clients Say
         </h2>

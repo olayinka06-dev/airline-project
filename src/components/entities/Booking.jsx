@@ -57,9 +57,9 @@ const Booking = () => {
                   start={0}
                   end={225}
                   duration={2}
-                  className="text-4xl font-bold text-text-orange"
+                  className="md:text-4xl text-2xl font-bold text-text-orange"
                 />
-                <p className="text-lg font-semibold text-gray-800">
+                <p className="md:text-lg text-sm font-semibold text-gray-800">
                   SKilled Experts
                 </p>
               </div>
@@ -68,9 +68,9 @@ const Booking = () => {
                   start={0}
                   end={50}
                   duration={3}
-                  className="text-4xl font-bold text-text-orange"
+                  className="md:text-4xl text-2xl font-bold text-text-orange"
                 />
-                <p className="text-lg font-semibold text-gray-800">
+                <p className="md:text-lg text-sm font-semibold text-gray-800">
                   Happy Clients
                 </p>
               </div>
@@ -79,9 +79,9 @@ const Booking = () => {
                   start={0}
                   end={500}
                   duration={4}
-                  className="text-4xl font-bold text-text-orange"
+                  className="md:text-4xl text-2xl font-bold text-text-orange"
                 />
-                <p className="text-lg font-semibold text-gray-800">
+                <p className="md:text-lg text-sm font-semibold text-gray-800">
                   Complete Projects
                 </p>
               </div>

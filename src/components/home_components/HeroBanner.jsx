@@ -8,7 +8,7 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
 const HeroBanner = () => {
   return (
     <div className="container-fluid z-[50] swipper_container">
-      <div className="bg-[url(/images/4.jpg)] bg-center h-screen bg-no-repeat">
+      <div className="bg-[url(/images/4.jpg)] bg-center h-[90vh] bg-no-repeat">
         <Swiper
           modules={[Autoplay, Pagination, Navigation]}
           autoplay={{
@@ -24,125 +24,50 @@ const HeroBanner = () => {
           }}
         >
           <SwiperSlide>
-            <div className="flex justify-center text-white items-center w-full bg-[url(/images/4.jpg)] bg-center z-[-100] h-screen bg-no-repeat">
-              <div className="container">
-                <h1 className="md:text-[50px] text-[30px] text-[#FAFAFA] font-bold">
-                  Your Gateway to Financial Possibilities
+            <div className="flex justify-center text-white items-center w-full bg-[url(/images/4.jpg)] bg-center z-[-100] h-[90vh] bg-no-repeat">
+              <div className="container mb-4">
+                <h1 className="md:text-[50px] text-[30px] text-text-orange font-bold">
+                Reliable and Efficient Transportation Services
                 </h1>
-                <p className="text-[24px] leading-loose">
-                  Dive into a world where payments, remittances, trades,
-                  investments, and capital raising are all at your fingertips.
+                <p className="text-[24px] leading-relaxed">
+                Count on us for dependable and streamlined transportation solutions that cater to your needs, ensuring your goods are delivered promptly and with utmost efficiency.
                 </p>
-                <div className="mt-3">
-                  <button className="register py-3 px-5">Register Now</button>
-                </div>
-                <div className="flex flex-row gap-3 justify-start items-start">
-                  <div className="flex flex-col gap-1 text-center">
-                    <h3 className="text-[24px] text-white font-[600]">
-                      13% APY
-                    </h3>
-                    <span className="text-[14px] font-[500]">
-                      paid out weekly
-                    </span>
-                  </div>
-                  <div className="flex flex-col gap-1 text-center">
-                    <h3 className="text-[24px] text-white font-[600]">50+</h3>
-                    <span className="text-[14px] font-[500]">
-                      trade currency
-                    </span>
-                  </div>
-                  <div className="flex flex-col gap-1 text-center">
-                    <h3 className="text-[24px] text-white font-[600]">40+</h3>
-                    <span className="text-[14px] font-[500]">countries</span>
-                  </div>
-                </div>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex justify-center text-white  items-center w-full bg-[url(/images/5.jpg)] bg-center h-screen bg-no-repeat">
-              <div className="container">
-                <h1 className="md:text-[50px] text-[30px] text-[#FAFAFA] font-bold">
-                  Swift Payments Redefined by Empowering Global Transactions
+            <div className="flex justify-center text-white  items-center w-full bg-[url(/images/5.jpg)] bg-center h-[90vh] bg-no-repeat">
+              <div className="container mb-4">
+                <h1 className="md:text-[50px] text-[30px] text-text-orange font-bold">
+                Timely and Secure Cargo Delivery
                 </h1>
-                <p className="text-[24px] leading-loose">
-                  Experience the future of payments with TuluPay's revolutionary
-                  approach.
+                <p className="text-[24px] leading-relaxed">
+                Enjoy peace of mind with our secure cargo delivery services, providing timely arrivals and safeguarding your valuable shipments with advanced tracking and security measures.
                 </p>
-                <div className="mt-3">
-                  <button className="register py-3 px-5">Learn More</button>
-                </div>
-
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex justify-center text-white  items-center w-full bg-[url(/images/6.jpg)] bg-center h-screen bg-no-repeat">
-              <div className="container">
-                <h1 className="md:text-[50px] text-[30px] text-[#FAFAFA] font-bold">
-                  Remittance Evolved through Connecting Hearts, Bridging
-                  Distances
+            <div className="flex justify-center text-white  items-center w-full bg-[url(/images/6.jpg)] bg-center h-[90vh] bg-no-repeat">
+              <div className="container mb-4">
+                <h1 className="md:text-[50px] text-[30px] text-text-orange font-bold">
+                Fast and Convenient Air Transport
                 </h1>
-                <p className="text-[24px] leading-loose">
-                  Break down geographical barriers with TuluPay's streamlined
-                  remittance solutions.
+                <p className="text-[24px] leading-relaxed">
+                Experience swift and hassle-free air transport that prioritizes your time, offering seamless travel and efficient connections for your convenience.
                 </p>
-                <div className="mt-3">
-                  <button className="register py-3 px-5">Learn More</button>
-                </div>
-
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex justify-center text-white  items-center w-full bg-[url(/images/4.jpg)] bg-center h-screen bg-no-repeat">
-              <div className="container">
-                <h1 className="md:text-[50px] text-[30px] text-[#FAFAFA] font-bold">
-                  Crafting Your Trading Expedition
+            <div className="flex justify-center text-white  items-center w-full bg-[url(/images/4.jpg)] bg-center h-[90vh] bg-no-repeat">
+              <div className="container mb-4">
+                <h1 className="md:text-[50px] text-[30px] text-text-orange font-bold">
+                Nationwide Ground Delivery
                 </h1>
-                <p className="text-[24px] leading-loose">
-                  Discover a realm of trading possibilities through TuluPay's
-                  comprehensive exchange and trading features.
+                <p className="text-[24px] leading-relaxed">
+                Connect nationwide with our reliable ground delivery network, linking communities and delivering packages across the country with efficiency and precision.
                 </p>
-                <div className="mt-3">
-                  <button className="register py-3 px-5">Learn More</button>
-                </div>
-
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex justify-center text-white  items-center w-full bg-[url(/images/5.jpg)] bg-center h-screen bg-no-repeat">
-              <div className="container">
-                <h1 className="md:text-[50px] text-[30px] text-[#FAFAFA] font-bold">
-                  Navigating Pathways to Financial Flourishing
-                </h1>
-                <p className="text-[24px] leading-loose">
-                  Embark on an intelligent investment journey with TuluPay's
-                  innovative solutions.
-                </p>
-                <div className="mt-3">
-                  <button className="register py-3 px-5">learnmore</button>
-                </div>
-
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex  items-center w-full bg-[url(/images/6.jpg)] bg-center h-screen bg-no-repeat">
-              <div className="">
-                <h1 className="md:text-[50px] text-[30px] text-[#FAFAFA] font-bold">
-                  Redefining Capital Raising by Fostering Dreams, Fueling
-                  Progress
-                </h1>
-                <p className="text-[24px] leading-loose">
-                  Embark on an intelligent investment journey with TuluPay's
-                  innovative solutions.
-                </p>
-                <div className="mt-3">
-                  <button className="register py-3 px-5">learnmore</button>
-                </div>
-
               </div>
             </div>
           </SwiperSlide>
