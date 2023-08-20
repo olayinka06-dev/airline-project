@@ -109,7 +109,7 @@ const Booking = () => {
                   <FaCheckCircle />
                 </div>
                 <p className="text-green-500 text-center">
-                  Thank you for your submission! We'll get in touch with you
+                  Thank you for your submission! We&apos;ll get in touch with you
                   soon.
                 </p>
               </div>
