@@ -15,6 +15,7 @@ const HeroBanner = () => {
             delay: 5000,
             disableOnInteraction: false,
           }}
+          grabCursor={true}
           pagination={{
             clickable: true,
           }}

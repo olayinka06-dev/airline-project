@@ -1,3 +1,5 @@
+import InteractiveFeatures from '@/components/about_components/InteractiveFeatures'
+import StatisticsNumbers from '@/components/about_components/StatisticsNumbers'
 import Testimonials from '@/components/entities/Testimonial'
 import AboutComponent from '@/components/home_components/AboutSection'
 import WhyChooseUs from '@/components/home_components/WhychooseUs'
@@ -7,7 +9,9 @@ const page = () => {
   return (
     <>
       <AboutComponent/>
+      <StatisticsNumbers/>
       <WhyChooseUs/>
+      <InteractiveFeatures/>
       <Testimonials/>
     </>
   )

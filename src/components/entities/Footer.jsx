@@ -37,19 +37,19 @@ const Footer = () => {
             <div className="md:w-1/2 mb-5">
               <h3 className="text-text-orange mb-4">Quick Links</h3>
               <div className="flex flex-col justify-start">
-                <a className="text-white mb-2 flex items-center" href="#">
+                <a className="text-white mb-2 flex items-center" href="/">
                   <i className="fa fa-angle-right mr-2"><FaAngleRight/></i>Home
                 </a>
-                <a className="text-white mb-2 flex items-center" href="#">
+                <a className="text-white mb-2 flex items-center" href="/about">
                   <i className="fa fa-angle-right mr-2"><FaAngleRight/></i>About Us
                 </a>
-                <a className="text-white mb-2 flex items-center" href="#">
+                <a className="text-white mb-2 flex items-center" href="/service">
                   <i className="fa fa-angle-right mr-2"><FaAngleRight/></i>Our Services
                 </a>
                 <a className="text-white mb-2 flex items-center" href="#">
                   <i className="fa fa-angle-right mr-2"><FaAngleRight/></i>Pricing Plan
                 </a>
-                <a className="text-white flex items-center" href="#">
+                <a className="text-white flex items-center" href="/contact">
                   <i className="fa fa-angle-right mr-2"><FaAngleRight/></i>Contact Us
                 </a>
               </div>
