@@ -1,6 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import CountUp from "react-countup";
+import emailjs from "@emailjs/browser";
 // import emailjs from 'emailjs-com';
 import {
   FaRegCalendarAlt,
@@ -8,31 +9,45 @@ import {
   FaUser,
   FaEnvelope,
   FaPhone,
+  FaCheckCircle,
 } from "react-icons/fa";
 
 const Booking = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState(false);
+
+  const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    // try {
-    //   const response = await emailjs.sendForm(
-    //     'YOUR_SERVICE_ID', // Your EmailJS service ID
-    //     'YOUR_TEMPLATE_ID', // Your EmailJS template ID
-    //     e.target,
-    //     'YOUR_USER_ID' // Your EmailJS user ID
-    //   );
-
-    //   console.log('Email sent:', response);
-    //   setIsSubmitting(false);
-    //   setIsSubmitted(true);
-    // } catch (error) {
-    //   console.error('Error sending email:', error);
-    //   setIsSubmitting(false);
-    // }
+    emailjs
+      .sendForm(
+        "service_xhod3gt",
+        "template_ay3g3p9",
+        form.current,
+        "u2nfu0FS3Hq8iz7Hh"
+      )
+      .then(
+        (response) => {
+          // setSuccess("Your message has been sent. Thank you!");
+          console.log("Email sent:", response);
+          setIsSubmitting(false);
+          setIsSubmitted(true);
+          setTimeout(() => {
+            setIsSubmitted(false);
+          }, 3000);
+          console.log(response.text);
+          e.target.reset();
+          setError(false);
+        },
+        (error) => {
+          setError(true);
+          console.error("Error sending email:", error);
+          setIsSubmitting(false);
+        }
+      );
   };
 
   return (
@@ -89,13 +104,20 @@ const Booking = () => {
           </div>
           <div className="">
             {isSubmitted ? (
-              <p className="text-text-orange text-center">
-                Thank you for your submission! We'll get in touch with you soon.
-              </p>
+              <div className="text-center flex justify-center flex-col">
+                <div className="text-white mx-auto rounded-full p-4 bg-green-500 text-3xl">
+                  <FaCheckCircle />
+                </div>
+                <p className="text-green-500 text-center">
+                  Thank you for your submission! We'll get in touch with you
+                  soon.
+                </p>
+              </div>
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="bg-gray-100 rounded-lg p-8 shadow-lg"
+                ref={form}
+                className="bg-gray-100 rounded-lg py-8 px-3 md:px-8 shadow-lg"
               >
                 <div className="mb-4">
                   <label className="block text-gray-700 text-sm font-semibold mb-2">
@@ -158,9 +180,9 @@ const Booking = () => {
                     required
                   >
                     <option value="">Select Service Type</option>
-                    <option value="personal">Personal Travel</option>
-                    <option value="cargo">Cargo Delivery</option>
-                    <option value="air">Air Transport</option>
+                    <option value="Personal Travel">Personal Travel</option>
+                    <option value="Cargo Delivery">Cargo Delivery</option>
+                    <option value="Air Transport">Air Transport</option>
                   </select>
                 </div>
                 <div className="mb-4">
@@ -216,14 +238,13 @@ const Booking = () => {
                 <button
                   type="submit"
                   className={`${
-                    isSubmitting
-                      ? "opacity-[50%]"
-                      : "bg-text-orange hover:opacity-[90%]"
-                  } text-white py-2 px-4 rounded-full transition-colors duration-300 ease-in-out`}
+                    isSubmitting ? "opacity-[50%]" : " hover:opacity-[90%]"
+                  } text-white bg-text-orange py-2 px-4 rounded-full transition-colors duration-300 ease-in-out`}
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Submitting..." : "Submit"}
                 </button>
+                {error && <p className="text-red-500">Network Error, Message Not Sent</p>}
               </form>
             )}
           </div>
