@@ -1,8 +1,11 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 
 const NavBar = () => {
+  const pathname = usePathname();
+
   const [activeLink, setActiveLink] = useState("home");
   const [menu, setMenu] = useState(false);
   const toggleMenu = () => {
@@ -21,31 +24,27 @@ const NavBar = () => {
           </div>
           <div className="hidden md:flex items-center gap-4">
             <Link
-              onClick={() => setActiveLink("home")}
-              className={`nav-link ${activeLink === "home" ? "active" : ""}`}
+              className={`nav-link ${pathname === "/" ? "active" : ""}`}
               href={"/"}
             >
               Home
             </Link>
             <Link
-              onClick={() => setActiveLink("about")}
-              className={`nav-link ${activeLink === "about" ? "active" : ""}`}
+              className={`nav-link ${pathname === "/about" ? "active" : ""}`}
               href={"/about"}
             >
               About Us
             </Link>
             <Link
-              onClick={() => setActiveLink("services")}
               className={`nav-link ${
-                activeLink === "services" ? "active" : ""
+                pathname === "/service" ? "active" : ""
               }`}
               href={"/service"}
             >
               Services
             </Link>
             <Link
-              onClick={() => setActiveLink("contact")}
-              className={`nav-link ${activeLink === "contact" ? "active" : ""}`}
+              className={`nav-link ${pathname === "/contact" ? "active" : ""}`}
               href={"/contact"}
             >
               Contact
@@ -53,7 +52,6 @@ const NavBar = () => {
           </div>
           <div className="hidden md:flex items-center gap-3">
             <Link
-              onClick={() => setActiveLink("booking")}
               className={`bg-text-orange py-[10px] px-5 text-white rounded-2xl border-none`}
               href={"/booking"}
             >
@@ -76,106 +74,46 @@ const NavBar = () => {
             } flex-col px-5 bg-white md:hidden absolute items-start gap-4`}
           >
             <Link
-              onClick={() => setActiveLink("home")}
               className={`hover:text-text-orange ${
-                activeLink === "home" ? "text-text-orange" : ""
+                pathname === "/" ? "text-text-orange" : ""
               }`}
               href={"/"}
             >
               Home
             </Link>
             <Link
-              onClick={() => setActiveLink("about")}
               className={`hover:text-text-orange ${
-                activeLink === "about" ? "text-text-orange" : ""
+                pathname === "/about" ? "text-text-orange" : ""
               }`}
               href={"/about"}
             >
               About Us
             </Link>
             <Link
-              onClick={() => setActiveLink("services")}
               className={`hover:text-text-orange ${
-                activeLink === "services" ? "text-text-orange" : ""
+                pathname === "/service" ? "text-text-orange" : ""
               }`}
               href={"/service"}
             >
               Services
             </Link>
             <Link
-              onClick={() => setActiveLink("track")}
               className={`hover:text-text-orange ${
-                activeLink === "track" ? "text-text-orange" : ""
-              }`}
-              href={"/"}
-            >
-              Track Parcel
-            </Link>
-            <Link
-              onClick={() => setActiveLink("contact")}
-              className={`hover:text-text-orange ${
-                activeLink === "contact" ? "text-text-orange" : ""
+                pathname === "/contact" ? "text-text-orange" : ""
               }`}
               href={"/contact"}
             >
               Contact
             </Link>
+            <Link
+              className={`bg-text-orange py-[10px] px-5 text-white rounded-2xl border-none`}
+              href={"/booking"}
+            >
+              Get A Qoute
+            </Link>
           </div>
         </div>
       </header>
-      {/* <div className="w-full">
-        <div
-          className={`flex overflow-hidden z-[150]  w-full  transition-[all,3s,ease-linear] ${
-            menu ? "h-[40vh]" : "h-[0vh]"
-          } flex-col px-5 bg-white md:hidden fixed items-start gap-4`}
-        >
-          <Link
-            onClick={() => setActiveLink("home")}
-            className={`hover:text-text-orange ${
-              activeLink === "home" ? "text-text-orange" : ""
-            }`}
-            href={"/"}
-          >
-            Home
-          </Link>
-          <Link
-            onClick={() => setActiveLink("about")}
-            className={`hover:text-text-orange ${
-              activeLink === "about" ? "text-text-orange" : ""
-            }`}
-            href={"/about"}
-          >
-            About Us
-          </Link>
-          <Link
-            onClick={() => setActiveLink("services")}
-            className={`hover:text-text-orange ${
-              activeLink === "services" ? "text-text-orange" : ""
-            }`}
-            href={"/service"}
-          >
-            Services
-          </Link>
-          <Link
-            onClick={() => setActiveLink("track")}
-            className={`hover:text-text-orange ${
-              activeLink === "track" ? "text-text-orange" : ""
-            }`}
-            href={"/"}
-          >
-            Track Parcel
-          </Link>
-          <Link
-            onClick={() => setActiveLink("contact")}
-            className={`hover:text-text-orange ${
-              activeLink === "contact" ? "text-text-orange" : ""
-            }`}
-            href={"/contact"}
-          >
-            Contact
-          </Link>
-        </div>
-      </div> */}
     </>
   );
 };
