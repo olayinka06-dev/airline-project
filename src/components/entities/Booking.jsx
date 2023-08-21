@@ -2,7 +2,6 @@
 import React, { useState, useRef } from "react";
 import CountUp from "react-countup";
 import emailjs from "@emailjs/browser";
-// import emailjs from 'emailjs-com';
 import {
   FaRegCalendarAlt,
   FaMapMarkerAlt,
