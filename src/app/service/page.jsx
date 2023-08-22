@@ -9,6 +9,7 @@ import TrainFreightDetail from "@/components/service_component/TrainFreight";
 import CustomsClearanceDetail from "@/components/service_component/CustomClearanceFreight";
 import WarehouseSolutionsDetail from "@/components/service_component/WareHousing";
 import AirFreight from "@/components/service_component/AirFreight";
+import HeroBanner from "@/components/entities/HeroBanner";
 
 const ServiceDetail = () => {
   useEffect(() => {
@@ -18,20 +19,18 @@ const ServiceDetail = () => {
     });
   }, []);
   return (
-    <div className="container py-5">
+    <div className="">
+      <HeroBanner
+        head={"Our Services"}
+        paragraph={"Explore Our Range of Transportation Services"}
+      />
       <div className="py-5">
-        {/* <a
-          className="text-text-orange flex items-center text-uppercase"
-          href="serve"
-        >
-          <FaArrowLeft /> Back to Services
-        </a> */}
-        <AirFreight/>
-        <OceanFreightDetail/>
-        <RoadFreightDetail/>
-        <TrainFreightDetail/>
-        <CustomsClearanceDetail/>
-        <WarehouseSolutionsDetail/>
+        <AirFreight />
+        <OceanFreightDetail />
+        <RoadFreightDetail />
+        <TrainFreightDetail />
+        <CustomsClearanceDetail />
+        <WarehouseSolutionsDetail />
       </div>
     </div>
   );

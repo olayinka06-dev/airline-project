@@ -1,4 +1,4 @@
-import AboutBanner from "@/components/about_components/AboutBanner";
+import HeroBanner from "@/components/entities/HeroBanner";
 import InteractiveFeatures from "@/components/about_components/InteractiveFeatures";
 import StatisticsNumbers from "@/components/about_components/StatisticsNumbers";
 import Testimonials from "@/components/entities/Testimonial";
@@ -9,7 +9,10 @@ import React from "react";
 const page = () => {
   return (
     <>
-      <AboutBanner />
+      <HeroBanner
+        head={"Discover Our Story"}
+        paragraph={"Delivering Excellence in Transportation Services"}
+      />
       <AboutComponent />
       <StatisticsNumbers />
       <WhyChooseUs />

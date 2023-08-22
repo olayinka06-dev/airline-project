@@ -31,6 +31,19 @@ h6 {
     --background-end-rgb: 0, 0, 0;
   }
 }
+.animate-bg-scroll {
+  animation: bgScroll 20s linear infinite alternate;
+}
+
+@keyframes bgScroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10%);
+  }
+}
+
 .nav-link {
   @apply h-full relative transition duration-500 ease-linear after:absolute after:bottom-[-100%] after:bg-text-orange after:transition-transform after:scale-x-0 after:h-1 md:after:w-full after:w-[90px] after:left-0 hover:after:scale-x-[1] hover:after:bg-text-orange;
 }

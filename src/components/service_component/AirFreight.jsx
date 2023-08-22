@@ -4,7 +4,7 @@ import { FiCheckCircle } from "react-icons/fi";
 
 const AirFreight = () => {
   return (
-    <div className="">
+    <div className="container">
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-text-gray text-center">
         Air Freight
       </h1>
