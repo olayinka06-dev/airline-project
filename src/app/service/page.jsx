@@ -24,7 +24,7 @@ const ServiceDetail = () => {
         head={"Our Services"}
         paragraph={"Explore Our Range of Transportation Services"}
       />
-      <div className="py-5">
+      <div className="py-10">
         <AirFreight />
         <OceanFreightDetail />
         <RoadFreightDetail />

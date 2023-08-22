@@ -47,7 +47,7 @@ const ContactInformation = () => {
     <section className="py-16 bg-gray-100">
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-text-gray text-center">
-          Contact Us
+          {/* Contact Us */}
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="bg-white rounded-lg p-6 shadow-md">
